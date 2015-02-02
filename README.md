@@ -1,8 +1,8 @@
 # DDR2 Controller
 Generally speaking, what I did in this project:
 - Designed and implemented a <b>DDR2 controller</b> in <b>Verilog HDL</b> and simulated the designs along with <b>Denali’s DDR2 model</b> using <b>Cadence NC-Verilog</b>. 
-- Synthesized the entire design with <b>Synopsys Design Compiler</b>. 
-- Ran post-synthesis simulation and verified the correct operation of the synthesized design.
+- <b>Synthesized</b> the entire design with <b>Synopsys Design Compiler</b>. 
+- Ran <b>post-synthesis</b> simulation and verified the correct operation of the synthesized design.
 
 #### RTL Implementation (Pre-synthesis)
 - The DDR2 controller provided a simple FIFO based front-end that would support write and read transactions like scalar, block and atomic to and from the DDR2 SDRAM.

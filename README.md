@@ -1,10 +1,17 @@
-# DDR2 and DDR3
-#### RTL Implementation
+# DDR2 Controller
+Generally speaking, what I did in this project:
+- Designed and implemented a DDR2 controller in Verilog HDL and simulated the designs along with Denali’s DDR2 model using Cadence NC-Verilog. 
+- Synthesized the entire design with Synopsys Design Compiler. 
+- Ran post-synthesis simulation and verified the correct operation of the synthesized design.
 
-Generally speaking, this project is to wite a so-called [ddr_controller.v]() to control this DDR to do all the read and write operations. Of course you need to be very familiar with the specs of the DDR, so as to let the FIFOs, buffer etc, cooperate well and the timing protocols.<br />
+#### RTL Implementation (Pre-synthesis)
+- The DDR2 controller provided a simple FIFO based front-end that would support write and read transactions like scalar, block and atomic to and from the DDR2 SDRAM.
+- All timing, bus interface and initialization specifications are refering from [the JEDEC DDR2 SDRAM Standard (JESD79-2C)]().
+- The controller would initialize the DDR2 model (chip) with the given parameters like CAS latency and Burst length etc. Normal data transactions would start after a successful completion of the DDR2 initialization sequence.
+
 ![image] (https://dl.dropboxusercontent.com/s/il4y5c0wc0xtiod/ddr.png?dl=0) <br />
-Knowing that, here comes the upgraded fancy version of read and write. We have to let the DDR perform operations like:
-<b>Scalar Read and Write, Block Read and Write and Atomic Read and Write</b>. And we went more detailed with different block sizes and different kinds of atomic operations.<br />
+
+
 So we wrote the [Processing_logic.v]() and the ring buffer [ddr2_ring_buffer8.v]() to make things clear and organised.<br />
 Simply speaking, when you read a block of data instead of just one single unit, you could save the data temporarily in this ring buffer. Then you could take your time to let the data out to the port in whatever sequence you like. [Processing_logic.v]() is where we deal with different kinds of operations. So all [ddr_controller.v]() needs to do is interface only.
 

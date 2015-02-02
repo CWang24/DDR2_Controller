@@ -1,4 +1,4 @@
-# DDR
+# DDR2 and DDR3
 #### RTL Implementation
 
 Generally speaking, this project is to wite a so-called [ddr_controller.v]() to control this DDR to do all the read and write operations. Of course you need to be very familiar with the specs of the DDR, so as to let the FIFOs, buffer etc, cooperate well and the timing protocols.<br />

@@ -12,8 +12,8 @@ Generally speaking, what I did in this project:
 ![image] (https://dl.dropboxusercontent.com/s/il4y5c0wc0xtiod/ddr.png?dl=0) <br />
 
 
-(What are [Processing_logic.v]() and the ring buffer ( [ddr2_ring_buffer8.v]()) for?<br />
-To be short, when you read a block of data instead of just one single unit, you could save the data temporarily in this ring buffer. Then you could take your time to let the data output to the port in whatever sequence you like.<br /> [Processing_logic.v]() is where we deal with different kinds of operations. So all [ddr_controller.v]() needs to do is interface only.)
+(What are [Processing_logic.v](https://github.com/CWang24/DDR2_Controller/blob/master/Processing_logic.v) and the ring buffer ( [ddr2_ring_buffer8.v](https://github.com/CWang24/DDR2_Controller/blob/master/ddr2_ring_buffer8.v)) for?<br />
+To be short, when you read a block of data instead of just one single unit, you could save the data temporarily in this ring buffer. Then you could take your time to let the data output to the port in whatever sequence you like.<br /> [Processing_logic.v](https://github.com/CWang24/DDR2_Controller/blob/master/Processing_logic.v) is where we deal with different kinds of operations. So all [ddr2_controller.v](https://github.com/CWang24/DDR2_Controller/blob/master/ddr2_controller.v) needs to do is interface only.)
 
 #### Synthesis
 To narrow the clock period so as to let the DDR run in its favourate frequency, we really spent some nights. 

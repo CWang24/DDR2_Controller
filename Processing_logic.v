@@ -1,3 +1,7 @@
+// Be very very careful when trying to use the content of my code 
+// into you lab assignment in any related course. Professor is very 
+// very strict in plagiarism. It detects easily with their tools 
+// and the punishment is very severe.
 ////////////////////////top///////////////////////////
 `define TCMD	9'd002 
 `define TGET0	`TCMD+1

@@ -1,7 +1,7 @@
 # DDR2 Controller
 Generally speaking, what I did in this project:
-- Designed and implemented a DDR2 controller in Verilog HDL and simulated the designs along with Denali’s DDR2 model using Cadence NC-Verilog. 
-- Synthesized the entire design with Synopsys Design Compiler. 
+- Designed and implemented a <b>DDR2 controller</b> in <b>Verilog HDL</b> and simulated the designs along with <b>Denali’s DDR2 model</b> using <b>Cadence NC-Verilog</b>. 
+- Synthesized the entire design with <b>Synopsys Design Compiler</b>. 
 - Ran post-synthesis simulation and verified the correct operation of the synthesized design.
 
 #### RTL Implementation (Pre-synthesis)
@@ -17,11 +17,11 @@ To be short, when you read a block of data instead of just one single unit, you 
 
 #### Synthesis
 To narrow the clock period so as to let the DDR run in its favourate frequency, we really spent some nights. 
-I used the tools <b>Design Compiler and the GUI Design Vision</b> to locate and analyze the longest path, then modify the RTL to cut that path short. Actually our group was kind of lucky, because we only modified two paths and it's done.  <br />
+I used the tools <b>Design Compiler</b> and the GUI <b>Design Vision</b> to locate and analyze the longest path, then modify the RTL to cut that path short. Actually our group was kind of lucky, because we only modified two paths and it's done.  <br />
 
 Still, this made me realized how important it is to use "reg" instead of "wire" in a design. Especially when the project is a big one which contains several parts. If you use a "wire" as the connection between two parts, you'll suffer.
 
-And as I knew, many other group sufferred because of FIFO. You don't need a complicate design, and it's used everywhere. So the more concise your FIFO, the easier your job.
+And as I knew, many other group sufferred because of FIFO. You don't need a complicate designed FIFO, and it's used everywhere. So the more concise your FIFO, the easier your job.
 
 #### Post Synthesis and Automatic Layout
 

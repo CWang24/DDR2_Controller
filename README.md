@@ -1,7 +1,7 @@
 # DDR2 Controller
-System Frequency: 500MHz</b> 
-DDR2 Frequency:250MHz</b> 
-OSU’s 0.18um standard cell library to be used for synthesis.</b>
+System Frequency: 500MHz<br /> 
+DDR2 Frequency:250MHz<br />
+OSU’s 0.18um standard cell library to be used for synthesis.<br />
 Generally speaking, what I did in this project:
 - Designed and implemented a <b>DDR2 controller</b> in <b>Verilog HDL</b> and simulated the designs along with <b>Denali’s DDR2 model</b> using <b>Cadence NC-Verilog</b>. 
 - <b>Synthesized</b> the entire design with <b>Synopsys Design Compiler</b>. 
